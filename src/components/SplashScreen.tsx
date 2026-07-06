@@ -26,7 +26,9 @@ export function SplashScreen({ onEnter }: SplashScreenProps) {
       <div className="mt-8 max-w-md text-sm text-slate-400">
         <p className="uppercase tracking-widest text-slate-500">Autores</p>
         <p className="mt-2 leading-relaxed text-slate-300">
-          Dimas Felipe de Miranda, João Bosco Laudares &amp; Sandro Laudares
+          Dimas Felipe de Miranda, João Bosco Laudares, Sandro Laudares, Anderson
+          Gonçalves Siqueira, Adilsion Lopes de Oliveira &amp; Fabio Inacio de
+          Oliveira
         </p>
       </div>
 
