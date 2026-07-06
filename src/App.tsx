@@ -2,11 +2,17 @@ import { useState } from 'react'
 import { topics } from './data/topics'
 import { TopicView } from './components/TopicView'
 import { CalculAiChat } from './components/CalculAiChat'
+import { SplashScreen } from './components/SplashScreen'
 
 export default function App() {
   const [activeId, setActiveId] = useState(topics[0].id)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [started, setStarted] = useState(false)
   const active = topics.find((t) => t.id === activeId) ?? topics[0]
+
+  if (!started) {
+    return <SplashScreen onEnter={() => setStarted(true)} />
+  }
 
   return (
     <div className="min-h-screen bg-slate-900">
