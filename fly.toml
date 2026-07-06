@@ -1,0 +1,22 @@
+app = "calculo1-calcul-ai"
+primary_region = "gru"
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+
+[env]
+  PORT = "8080"
+  OPENAI_BASE_URL = "https://api.groq.com/openai/v1"
+  OPENAI_MODEL = "llama-3.3-70b-versatile"
