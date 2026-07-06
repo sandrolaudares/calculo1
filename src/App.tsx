@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { topics } from './data/topics'
 import { TopicView } from './components/TopicView'
+import { CalculAiChat } from './components/CalculAiChat'
 
 export default function App() {
   const [activeId, setActiveId] = useState(topics[0].id)
@@ -66,6 +67,8 @@ export default function App() {
           </footer>
         </main>
       </div>
+
+      <CalculAiChat />
     </div>
   )
 }
